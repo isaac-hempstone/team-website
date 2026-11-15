@@ -5,13 +5,15 @@
 
 /* ---------- 1. Design tokens ---------- */
 :root {
-  --color-bg: #f6f7f4;
+  --color-bg: #ffffff;
   --color-surface: #ffffff;
-  --color-text: #1c2430;
-  --color-muted: #5a6474;
-  --color-primary: #0f6e6e;
-  --color-primary-dark: #0a5050;
+  --color-text: #18231b;
+  --color-muted: #536359;
+  --color-primary: #217a3e;
+  --color-primary-dark: #155d2e;
   --color-on-primary: #ffffff;
+  --color-card-hover: #f1f8f2;
+  --color-card-shadow: rgb(33 122 62 / 12%);
   --color-border: #dde1e6;
   --color-error: #b3261e;
   --color-success: #1e7b3a;
@@ -30,14 +32,16 @@
 }
 
 body.dark {
-  --color-bg: #11161d;
-  --color-surface: #1a212b;
-  --color-text: #e7ebf0;
-  --color-muted: #a2abb9;
-  --color-primary: #4fc1c1;
-  --color-primary-dark: #83d8d8;
-  --color-on-primary: #0b1f1f;
-  --color-border: #2b3340;
+  --color-bg: #101b13;
+  --color-surface: #19271d;
+  --color-text: #e8f1e9;
+  --color-muted: #a8b9ab;
+  --color-primary: #86d99a;
+  --color-primary-dark: #a4e7b1;
+  --color-on-primary: #102016;
+  --color-card-hover: #203829;
+  --color-card-shadow: rgb(134 217 154 / 12%);
+  --color-border: #34483a;
   --color-error: #ff8a80;
   --color-success: #7ddc97;
   color-scheme: dark;
@@ -57,7 +61,9 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 h1,
@@ -201,7 +207,9 @@ img {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .button:hover {
@@ -241,6 +249,26 @@ img {
   padding-block: var(--space-4) var(--space-2);
 }
 
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-3);
+  padding-block: var(--space-4);
+}
+
+.feature-card {
+  min-height: 220px;
+}
+
+.feature-card h1 {
+  max-width: 18ch;
+  font-size: 2rem;
+}
+
+.feature-card h2 {
+  font-size: 1.5rem;
+}
+
 /* ---------- 6. Cards and grids ---------- */
 .team-grid,
 .project-grid {
@@ -254,6 +282,17 @@ img {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background-color: var(--color-surface);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--color-primary);
+  background-color: var(--color-card-hover);
+  box-shadow: 0 8px 20px var(--color-card-shadow);
 }
 
 .avatar {
