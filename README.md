@@ -1,5 +1,11 @@
 # team-website
 
+live site:https://isaac-hempstone.github.io/team-website/
+
+Team:
+Isaac Hempstone COM/3489/26 GITHUB USERNAME:isaac-hempstone
+Patrick
+
 Reflection Questions
 
 1. The menu toggle is a "<button>", not a clickable "<div>". Name two things you would lose with a "<div>", and who would be affected.
