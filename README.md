@@ -4,7 +4,7 @@ live site:https://isaac-hempstone.github.io/team-website/
 
 Team:<br/>
 Isaac Hempstone COM/3489/26 GITHUB USERNAME:isaac-hempstone<br/>
-Patrick
+Patrick COM/3430/26
 
 Reflection Questions
 
